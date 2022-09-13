@@ -1,25 +1,29 @@
 ---
 import AnimatedBottomBorderLink from "./AnimatedBottomBorderLink.tsx"
-import GitHubIcon from "../icons/GitHub.tsx"
+import ExcelIcon from "../icons/Excel.tsx"
+import WordIcon from "../icons/Word.tsx"
 
 const projects = [
     {
-        title: "Reqwasm",
-        link: "hamza1311/reqwasm",
-        description: "HTTP requests library for WASM Apps",
-        languages: ["Rust"],
+        title: "Monthly Salary Slip",
+        link: 'https://1drv.ms/x/s!AsGTushMwa-Xm3ptxl88pSEGDCYK?e=ls1qKE',
+        description: "Monthly employee salary slip",
+        icon: 'excel',
+        languages: ["Excel"],
     },
     {
-        title: "Clurry",
-        link: "hamza1311/clurry",
-        description: "A messaging application built",
-        languages: ["TypeScript", "React", "Firebase"],
+        title: "Data input form",
+        link: 'https://1drv.ms/x/s!AsGTushMwa-Xm34Uw_G_y_6WqJXY?e=QgQoNI',
+        description: "Data entry form educational institution",
+        icon: 'excel',
+        languages: ["Excel"],
     },
     {
-        title: "Dear Diary",
-        link: "hamza1311/dear-diary-web",
-        description: "A simple diary web app",
-        languages: ["TypeScript", "Next.JS"],
+        title: "Workbooks",
+        link: "https://1drv.ms/b/s!AsGTushMwa-Xmnl66fKFaRT1tSLO",
+        description: "Urdu workbooks for grade 6",
+        icon: 'word',
+        languages: ["Word"],
     },
 ]
 ---
@@ -43,11 +47,11 @@ const projects = [
                     </section>
 
                     <AnimatedBottomBorderLink
-                        href={`https://github.com/${it.link}`}
+                        href={it.link}
                         target="_blank"
                         ariaLabel={`${it.title} on GitHub`}
                     >
-                        <GitHubIcon dimensions={8} />
+                        {it.icon === 'excel' ? <ExcelIcon /> : <WordIcon />}
                     </AnimatedBottomBorderLink>
                 </div>
             </article>

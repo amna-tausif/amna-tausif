@@ -16,7 +16,7 @@ export default function Header() {
         <header className="flex items-center justify-between px-5 py-6 shadow dark:shadow-lg md:px-20">
             <a href="/">
                 <h3 className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-pink-500">
-                    H
+                    A
                 </h3>
             </a>
             <nav className="flex gap-4">
